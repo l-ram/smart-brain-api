@@ -18,9 +18,9 @@ client: 'pg',
   }
 });
 
-console.log(db.select('*').from('users').then(data=>
-    console.log(data)
-    ));
+// console.log(db.select('*').from('users').then(data=>
+//     console.log(data)
+//     ));
 
 
 const app = express();
@@ -36,6 +36,6 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db)})
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 
 
-app.listen(process.env.PORTPORT, ()=> {
+app.listen(process.env.PORT, ()=> {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
